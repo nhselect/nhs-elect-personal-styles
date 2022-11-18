@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "phrase-sets"
+    label: "Phrase Sets"
+    file: "content/phrase-sets.csv"
+    description: "Define phrase sets here"
+    create: false
+    delete: false
+    fields:
+      - {label: "A", name: "Phrase A", widget: "string"}
+      - {label: "B", name: "Phrase B", widget: "string"}
+      - {label: "C", name: "Phrase C", widget: "string"}
+      - {label: "D", name: "Phrase D", widget: "string"}
