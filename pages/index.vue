@@ -198,7 +198,8 @@ export default {
         const count = this.selectedPhrases.filter(
           (p) => p[0] === options[i]
         ).length
-        const barLength = weighting[options[i]][count]
+        const maxPossible = weighting[options[i]][weighting[options[i]].length-1]
+        const barLength = weighting[options[i]][count] ?? maxPossible
         selectedCounts[options[i]].count = count
         selectedCounts[options[i]].barLength = barLength
       }
