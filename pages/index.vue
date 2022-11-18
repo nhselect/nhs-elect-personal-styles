@@ -5,9 +5,7 @@
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-two-thirds">
             <div class="preferred-style-result">
-              <h1 class="nhsuk-heading-xl">
-                Your preferred style:
-              </h1>
+              <h1 class="nhsuk-heading-xl">Your preferred style:</h1>
               <div class="preferred-style-container">
                 <p>{{ preferredStyle }}</p>
               </div>
@@ -26,8 +24,10 @@
                 <dd class="nhsuk-summary-list__value">
                   <div
                     class="result-bar"
-                    :class="preferredStyle == option?'preferred':''"
-                    :style="'width:' + (result.barLength / maxBarLength)*100 + '%;'"
+                    :class="preferredStyle == option ? 'preferred' : ''"
+                    :style="
+                      'width:' + (result.barLength / maxBarLength) * 100 + '%;'
+                    "
                   >
                     &nbsp;
                   </div>
@@ -51,7 +51,8 @@
       </h1>
       <p>
         <span class="nhsuk-tag nhsuk-tag--yellow">
-          Privacy notice: none of the information you provide on this page is collected or shared in any form
+          Privacy notice: none of the information you provide on this page is
+          collected or shared in any form
         </span>
       </p>
       <p>Select the word or phrase in each set of 4 that is most like you:</p>
@@ -104,16 +105,25 @@
                 {{ selectedCount }}/{{ phraseCount }} selected
               </p>
               <p v-if="!allSelected">
-                Make sure you've selected a phrase from every set then return here to see your results
+                Make sure you've selected a phrase from every set then return
+                here to see your results
               </p>
-              <button v-else class="nhsuk-button nhsuk-u-font-size-48 nhsuk-u-padding-6" @click="viewResult" :disabled="!allSelected">
+              <button
+                v-else
+                class="nhsuk-button nhsuk-u-font-size-48 nhsuk-u-padding-6"
+                :disabled="!allSelected"
+                @click="viewResult"
+              >
                 See results
               </button>
             </div>
           </div>
         </div>
         <div class="nhsuk-grid-column-one-half">
-          <button class="nhsuk-button nhsuk-button--secondary" @click="clearSelection">
+          <button
+            class="nhsuk-button nhsuk-button--secondary"
+            @click="clearSelection"
+          >
             Clear selection
           </button>
         </div>
@@ -142,7 +152,7 @@ export default {
   data() {
     return {
       selectedPhrases: [],
-      resultVisible: false
+      resultVisible: false,
     }
   },
   head: {
@@ -164,10 +174,19 @@ export default {
     results() {
       const options = ['A', 'B', 'C', 'D']
       const weighting = {
-        A: [11,16,23,32,38,46,54,62,67,72,77,85,92,96,99,103,106,110,113],
-        B: [4,17,21,35,43,51,62,71,76,81,86,94,101,105,108,111,115],
-        C: [15,22,38,45,49,64,68,73,81,86,92,96,99,103,107,110,114],
-        D: [11,24,32,41,47,67,70,79,86,93,99,103,106,110,114]
+        A: [
+          11, 16, 23, 32, 38, 46, 54, 62, 67, 72, 77, 85, 92, 96, 99, 103, 106,
+          110, 113,
+        ],
+        B: [
+          4, 17, 21, 35, 43, 51, 62, 71, 76, 81, 86, 94, 101, 105, 108, 111,
+          115,
+        ],
+        C: [
+          15, 22, 38, 45, 49, 64, 68, 73, 81, 86, 92, 96, 99, 103, 107, 110,
+          114,
+        ],
+        D: [11, 24, 32, 41, 47, 67, 70, 79, 86, 93, 99, 103, 106, 110, 114],
       }
       const selectedCounts = {
         A: { count: 0, barLength: 0 },
@@ -186,13 +205,17 @@ export default {
       return selectedCounts
     },
     preferredStyle() {
-      const sorted = Object.entries(this.results).sort((a,b) => b[1].barLength - a[1].barLength)
+      const sorted = Object.entries(this.results).sort(
+        (a, b) => b[1].barLength - a[1].barLength
+      )
       return sorted[0][0]
     },
     maxBarLength() {
-      const sorted = Object.entries(this.results).sort((a,b) => b[1].barLength - a[1].barLength)
+      const sorted = Object.entries(this.results).sort(
+        (a, b) => b[1].barLength - a[1].barLength
+      )
       return sorted[0][1].barLength
-    }
+    },
   },
   methods: {
     clearSelection() {
@@ -201,8 +224,8 @@ export default {
     },
     viewResult() {
       this.resultVisible = true
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -247,6 +270,5 @@ export default {
       color: $color_nhsuk-white;
     }
   }
-  
 }
 </style>
