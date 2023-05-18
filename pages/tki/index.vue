@@ -147,7 +147,7 @@ export default {
         error({ statusCode: 404, message: err })
       })
 
-    const statementCount = statementSets.sets.length
+    const statementCount = statementSets && statementSets.sets ? statementSets.sets.length : 0
 
     return {
       statementSets,
