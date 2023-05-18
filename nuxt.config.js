@@ -63,7 +63,7 @@ export default {
   },
 
   generate: {
-    routes: ['user-guide/non-clinical-centre-managers'],
+    routes: ['tki','merrill-reid'],
   },
 
   hooks: {},
