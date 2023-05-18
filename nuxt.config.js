@@ -11,6 +11,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
+      { name: 'robots', content: 'noindex, nofollow' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -62,7 +63,7 @@ export default {
   },
 
   generate: {
-    routes: ['user-guide/non-clinical-centre-managers'],
+    routes: ['tki','merrill-reid'],
   },
 
   hooks: {},

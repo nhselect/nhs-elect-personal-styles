@@ -8,7 +8,7 @@
       </div>
       <div class="nhsuk-header__transactional-service-name">
         <a class="nhsuk-header__transactional-service-name--link" href="/"
-          >Merrill & Reid Personal Style Inventory</a
+          >{{ title }}</a
         >
       </div>
       <div id="content-header" class="nhsuk-header__content"></div>
@@ -18,24 +18,13 @@
 
 <script>
 export default {
-  computed: {
-    isUserGuide() {
-      const path = this.$router.currentRoute.path
-      return path.indexOf('user-guide/') > 0
-    },
-    role() {
-      const path = this.$router.currentRoute.path
-      if (path.indexOf('user-guide/')) {
-        const role = path.split('/')[2]
-        if (role) {
-          return role
-        } else {
-          return ''
-        }
-      }
-      return ''
-    },
-  },
+  data() {
+    const path = this.$router.currentRoute.path
+    const title = path.indexOf('tki') > -1 ? 'Thomas Kilman Conflict Mode Instrument (TKI)' : 'Merrill & Reid Personal Style Inventory'
+    return {
+      title: title
+    }
+  }
 }
 </script>
 

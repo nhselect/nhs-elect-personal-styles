@@ -1,0 +1,181 @@
+sets:
+- number: 1
+  options:
+  - text: There are times when I let others take responsibility for solving the problem.
+    behaviour: avoiding
+  - text: Rather than negotiate the things on which we disagree, I try to stress the things upon which we both agree.
+    behaviour: accommodating
+- number: 2
+  options:
+  - text: I try to find a compromise situation.
+    behaviour: compromising
+  - text: I attempt to deal with all of their and my concerns.
+    behaviour: collaborating
+- number: 3
+  options:
+  - text: I am usually firm in pursuing my goals.
+    behaviour: competing
+  - text: I might try to soothe the other's feelings and preserve our relationship.
+    behaviour: accommodating
+- number: 4
+  options:
+  - text: I try to find a compromise solution.
+    behaviour: compromising
+  - text: I sometimes sacrifice my own wishes for the wishes of the other person.
+    behaviour: accommodating
+- number: 5
+  options:
+  - text: I consistently seek the other's help in working out a solution.
+    behaviour: collaborating
+  - text: I try to do what is necessary to avoid useless tensions.
+    behaviour: avoiding
+- number: 6
+  options:
+  - text: I try to avoid creating unpleasantness for myself.
+    behaviour: avoiding
+  - text: I try to win my position.
+    behaviour: competing
+- number: 7
+  options:
+  - text: I try to postpone the issue until I have had some time to think it over.
+    behaviour: avoiding
+  - text: I give up some points in exchange for others.
+    behaviour: compromising
+- number: 8
+  options:
+  - text: I am usually firm in pursuing my goals.
+    behaviour: competing
+  - text: I attempt to get all concerns and issues immediately out in the open.
+    behaviour: collaborating
+- number: 9
+  options:
+  - text: I feel that differences are not always worth worrying about.
+    behaviour: avoiding
+  - text: I make some effort to get my way.
+    behaviour: competing
+- number: 10
+  options:
+  - text: I am firm in pursuing my goals.
+    behaviour: competing
+  - text: I try to find a compromise solution.
+    behaviour: compromising
+- number: 11
+  options:
+  - text: I attempt to get all concerns and issues immediately out in the open.
+    behaviour: collaborating
+  - text: I might try to soothe the other's feelings and preserve our relationship.
+    behaviour: accommodating
+- number: 12
+  options:
+  - text: I sometimes avoid taking positions which would create controversy.
+    behaviour: avoiding
+  - text: I will let them have some of their position if they let me have some of mine.
+    behaviour: compromising
+- number: 13
+  options:
+  - text: I propose a middle ground.
+    behaviour: compromising
+  - text: I press to get my points made.
+    behaviour: competing
+- number: 14
+  options:
+  - text: I tell them my ideas and ask them for theirs.
+    behaviour: collaborating
+  - text: I try to show them the logic and benefits of my position.
+    behaviour: competing
+- number: 15
+  options:
+  - text: I might try to soothe the other's feelings and preserve our relationship.
+    behaviour: accommodating
+  - text: I try to do what is necessary to avoid tensions.
+    behaviour: avoiding
+- number: 16
+  options:
+  - text: I try not to hurt the other's feelings.
+    behaviour: accommodating
+  - text: I try to convince the other person of the merits of my position.
+    behaviour: competing
+- number: 17
+  options:
+  - text: I am usually firm in pursuing my goals.
+    behaviour: competing
+  - text: I will let them have some of their position if they let me have some of mine.
+    behaviour: avoiding
+- number: 18
+  options:
+  - text: If it makes the other person happy, I might let them maintain their views.
+    behaviour: accommodating
+  - text: I will let them have some of their position if they let me have some of mine.
+    behaviour: compromising
+- number: 19
+  options:
+  - text: I attempt to get all concerns and issues immediately out in the open.
+    behaviour: collaborating
+  - text: I try to postpone the issue until I have had some time to think it over.
+    behaviour: avoiding
+- number: 20
+  options:
+  - text: I attempt to immediately work through our differences.
+    behaviour: collaborating
+  - text: I try to find a fair combination of gains and losses from everyone.
+    behaviour: compromising
+- number: 21
+  options:
+  - text: In approaching negotiations, I try to be considerate of the other person's wishes.
+    behaviour: accommodating
+  - text: I always lean toward a direct discussion of the problem.
+    behaviour: collaborating
+- number: 22
+  options:
+  - text: I try to find a position that is intermediate between theirs and mine.
+    behaviour: compromising
+  - text: I assert my wishes.
+    behaviour: competing
+- number: 23
+  options:
+  - text: I am very often concerned with satisfying all our wishes.
+    behaviour: collaborating
+  - text: There are times when I let others take responsibility for solving the problem.
+    behaviour: avoiding
+- number: 24
+  options:
+  - text: If the other's position seems very important to them, I would try to meet their wishes.
+    behaviour: accommodating
+  - text: I try to get them to settle for a compromise.
+    behaviour: compromising
+- number: 25
+  options:
+  - text: I try to show them the logic and benefits of my position.
+    behaviour: competing
+  - text: In approaching negotiations, I try to be considerate of the other person's wishes
+    behaviour: accommodating
+- number: 26
+  options:
+  - text: I propose a middle ground.
+    behaviour: compromising
+  - text: I am nearly always concerned with satisfying all our wishes.
+    behaviour: collaborating
+- number: 27
+  options:
+  - text: I sometimes avoid taking positions that would create controversy.
+    behaviour: avoiding
+  - text: If it makes the other person happy, I might let them maintain their views.
+    behaviour: accommodating
+- number: 28
+  options:
+  - text: I am usually firm in pursuing my goals.
+    behaviour: competing
+  - text: I usually seek the other's help in working out a solution.
+    behaviour: collaborating
+- number: 29
+  options:
+  - text: I propose a middle ground.
+    behaviour: compromising
+  - text: I feel that differences are not always worth worrying about.
+    behaviour: avoiding
+- number: 30
+  options:
+  - text: I try not to hurt the other's feelings.
+    behaviour: accommodating
+  - text: I always share the problem with the other person so that we can work it out.
+    behaviour: collaborating
