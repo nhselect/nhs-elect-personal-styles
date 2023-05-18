@@ -1,0 +1,181 @@
+sets:
+- number: 1
+  options:
+  - text: There are times when I let others take responsibility for solving the problem.
+    behaviour: avoiding
+  - text: Rather than negotiate the things on which we disagree, I try to stress the things upon which we both agree.
+    behaviour: accommodating
+- number: 2
+  options:
+  - text: A
+    behaviour: compromising
+  - text: B
+    behaviour: collaborating
+- number: 3
+  options:
+  - text: A
+    behaviour: competing
+  - text: B
+    behaviour: accommodating
+- number: 4
+  options:
+  - text: A
+    behaviour: compromising
+  - text: B
+    behaviour: accommodating
+- number: 5
+  options:
+  - text: A
+    behaviour: collaborating
+  - text: B
+    behaviour: avoiding
+- number: 6
+  options:
+  - text: A
+    behaviour: avoiding
+  - text: B
+    behaviour: competing
+- number: 7
+  options:
+  - text: A
+    behaviour: avoiding
+  - text: B
+    behaviour: compromising
+- number: 8
+  options:
+  - text: A
+    behaviour: competing
+  - text: B
+    behaviour: collaborating
+- number: 9
+  options:
+  - text: A
+    behaviour: avoiding
+  - text: B
+    behaviour: competing
+- number: 10
+  options:
+  - text: A
+    behaviour: competing
+  - text: B
+    behaviour: compromising
+- number: 11
+  options:
+  - text: A
+    behaviour: collaborating
+  - text: B
+    behaviour: accommodating
+- number: 12
+  options:
+  - text: A
+    behaviour: avoiding
+  - text: B
+    behaviour: compromising
+- number: 13
+  options:
+  - text: A
+    behaviour: compromising
+  - text: B
+    behaviour: competing
+- number: 14
+  options:
+  - text: A
+    behaviour: collaborating
+  - text: B
+    behaviour: competing
+- number: 15
+  options:
+  - text: A
+    behaviour: accommodating
+  - text: B
+    behaviour: avoiding
+- number: 16
+  options:
+  - text: A
+    behaviour: accommodating
+  - text: B
+    behaviour: competing
+- number: 17
+  options:
+  - text: A
+    behaviour: competing
+  - text: B
+    behaviour: avoiding
+- number: 18
+  options:
+  - text: A
+    behaviour: accommodating
+  - text: B
+    behaviour: compromising
+- number: 19
+  options:
+  - text: A
+    behaviour: collaborating
+  - text: B
+    behaviour: avoiding
+- number: 20
+  options:
+  - text: A
+    behaviour: collaborating
+  - text: B
+    behaviour: compromising
+- number: 21
+  options:
+  - text: A
+    behaviour: accommodating
+  - text: B
+    behaviour: collaborating
+- number: 22
+  options:
+  - text: A
+    behaviour: compromising
+  - text: B
+    behaviour: competing
+- number: 23
+  options:
+  - text: A
+    behaviour: collaborating
+  - text: B
+    behaviour: avoiding
+- number: 24
+  options:
+  - text: A
+    behaviour: accommodating
+  - text: B
+    behaviour: compromising
+- number: 25
+  options:
+  - text: A
+    behaviour: competing
+  - text: B
+    behaviour: accommodating
+- number: 26
+  options:
+  - text: A
+    behaviour: compromising
+  - text: B
+    behaviour: collaborating
+- number: 27
+  options:
+  - text: A
+    behaviour: avoiding
+  - text: B
+    behaviour: accommodating
+- number: 28
+  options:
+  - text: A
+    behaviour: competing
+  - text: B
+    behaviour: collaborating
+- number: 29
+  options:
+  - text: A
+    behaviour: compromising
+  - text: B
+    behaviour: avoiding
+- number: 30
+  options:
+  - text: A
+    behaviour: accommodating
+  - text: B
+    behaviour: collaborating
