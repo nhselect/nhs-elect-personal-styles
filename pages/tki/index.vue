@@ -3,37 +3,35 @@
     <div v-if="resultVisible" class="mr-result-container">
       <div class="nhsuk-width-container">
         <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-grid-column-three-quarters">
             <div class="preferred-style-result">
               <h1 class="nhsuk-heading-xl">
-                Your preferred style:
+                Your preferred behaviour:
               </h1>
               <div class="preferred-style-container">
-                <p class="nhsuk-u-font-size-64">
-                  {{ statements[preferredStyle] }}
+                <p class="nhsuk-u-font-size-48">
+                  {{ preferredStyleDescriptor }}
                 </p>
               </div>
             </div>
-          </div>
-          <div class="nhsuk-grid-column-one-half">
             <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
               <div
-                v-for="(result, option) in results"
-                :key="'result-' + option"
+                v-for="(result) in resultsSorted"
+                :key="'result-' + result[0]"
                 class="nhsuk-summary-list__row"
               >
                 <dt class="nhsuk-summary-list__key nhsuk-u-font-size-20">
-                  {{ statements[option] }} {{ result.count }}
+                  {{ statements[result[0]] }}
                 </dt>
                 <dd class="nhsuk-summary-list__value">
                   <div
                     class="result-bar"
-                    :class="preferredStyle == option ? 'preferred' : ''"
+                    :class="preferredStyle.includes(result[0]) ? 'preferred' : ''"
                     :style="
-                      'width:' + (result.barLength / maxBarLength) * 100 + '%;'
+                      'width:' + (result[1].barLength / maxBarLength) * 100 + '%;'
                     "
                   >
-                    &nbsp;
+                    {{ result[1].count }}
                   </div>
                 </dd>
               </div>
@@ -58,10 +56,12 @@
           collected or shared in any form
         </span>
       </p>
-      <p>Consider situations in which you find your wishes differing from those of another person. How do you usually respond to such situations?</p>
-      <p>Below are several pairs of statements describing possible behavioural responses. For each pair, select the statement which is most characteristic of your own behaviour.</p>
-      <p>In many cases, neither statement may be very typical of your behaviour, but please select the response which you would be more likely to use.</p>
-      <ul class="nhsuk-grid-row nhsuk-card-group">
+      <div class="nhsuk-u-reading-width">
+        <p>Consider situations in which you find your wishes differing from those of another person. How do you usually respond to such situations?</p>
+        <p>Below are several pairs of statements describing possible behavioural responses. For each pair, select the statement which is most characteristic of your own behaviour.</p>
+        <p>In many cases, neither statement may be very typical of your behaviour, but please select the response which you would be more likely to use.</p>
+      </div>
+      <ol class="nhsuk-grid-row nhsuk-card-group">
         <li
           v-for="(set, index) in statementSets.sets"
           :key="set.number"
@@ -90,6 +90,7 @@
                       />
                       <label
                         class="nhsuk-label nhsuk-radios__label"
+                        :class="selectedStatements[index] && selectedStatements[index][1] !== statement.text ? 'nhsuk-label__dimmed' : ''"
                         :for="'statement-set-' + index + '-' + option"
                       >
                         {{ statement.text }}
@@ -101,7 +102,7 @@
             </div>
           </div>
         </li>
-      </ul>
+      </ol>
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-card">
@@ -158,11 +159,11 @@ export default {
       selectedStatements: [],
       resultVisible: false,
       statements: {
-        'competing': 'Competing (forcing)',
-        'collaborating': 'Collaborating (problem solving)',
-        'compromising': 'Compromising (sharing)',
-        'avoiding': 'Avoiding (withdrawal)',
-        'accommodating': 'Accommodating (soothing)'
+        'competing': 'Competing',
+        'collaborating': 'Collaborating',
+        'compromising': 'Compromising',
+        'avoiding': 'Avoiding',
+        'accommodating': 'Accommodating'
       }
     }
   },
@@ -198,11 +199,19 @@ export default {
       }
       return selectedCounts
     },
+    resultsSorted() {
+      return Object.entries(this.results).sort((a,b) => b[1].count - a[1].count)
+    },
     preferredStyle() {
       const sorted = Object.entries(this.results).sort(
-        (a, b) => b[1].barLength - a[1].barLength
+        (a, b) => b[1].count - a[1].count
       )
-      return sorted[0][0]
+      const preferred = sorted.filter((f) => f[1].count === sorted[0][1].count)
+      return preferred.map(p => p[0])
+    },
+    preferredStyleDescriptor() {
+      const styles = this.preferredStyle.map((p) => this.statements[p]).join(', ')
+      return styles
     },
     maxBarLength() {
       const sorted = Object.entries(this.results).sort(
@@ -243,6 +252,10 @@ export default {
 
 .result-bar {
   background-color: $color_nhsuk-grey-3;
+  text-align: right;
+  font-weight: bold;
+  color: #fff;
+  padding-right: nhsuk-spacing(2);
 
   &.preferred {
     background-color: $color_nhsuk-blue;
@@ -263,5 +276,9 @@ export default {
       color: $color_nhsuk-white;
     }
   }
+}
+
+.nhsuk-label__dimmed {
+  color: $color_nhsuk-grey-2;
 }
 </style>
